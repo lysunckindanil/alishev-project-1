@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+@SuppressWarnings("NullableProblems")
 @Component
 @RequiredArgsConstructor
 public class PersonValidator implements Validator {
@@ -19,7 +20,6 @@ public class PersonValidator implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
-        Person person = (Person) target;
         if (personDAO.findByName(((Person) target).getPerson_name()).isPresent()) {
             errors.rejectValue("person_name", "", "Person with this name already exists!");
         }

@@ -1,7 +1,6 @@
 package com.project.springcourse.DAO;
 
 import com.project.springcourse.entities.Book;
-import com.project.springcourse.entities.Person;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;

@@ -57,7 +57,7 @@ public class BookController {
     }
 
     @PostMapping("/{id}/edit")
-    public String editBookPost(@PathVariable int id, @ModelAttribute @Valid Book book, BindingResult bindingResult, Model model) {
+    public String editBookPost(@PathVariable int id, @ModelAttribute @Valid Book book, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "books/edit";
         }

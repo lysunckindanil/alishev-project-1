@@ -1,6 +1,5 @@
 package com.project.springcourse.controllers;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.project.springcourse.DAO.BookDAO;
 import com.project.springcourse.DAO.PersonDAO;
 import com.project.springcourse.entities.Person;
@@ -12,7 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 
 @Controller
 @RequestMapping("/people")
